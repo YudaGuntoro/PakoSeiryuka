@@ -1,0 +1,48 @@
+﻿Connections:
+  Server: "127.0.0.1"
+  Port: "3306"
+  UserID: "root"
+  Password: "roots"
+  Db: "pakoakuina"
+  TimeOut: "5"
+  CommandTimeOut: "30"
+
+OmronPLC:
+  IP: "192.168.245.11"
+  Port: 9600
+
+MitsubishiPLC:
+  IP: "127.0.0.1"
+  Port: 6000
+
+KeyencePLC:
+  IP: "192.168.245.21"
+  Port: 8501
+
+SiemensPLC:
+  IP: "127.0.0.1"
+  Port: 102
+  PLC: 1
+
+MQTT:
+  Broker: "127.0.0.1"
+  Port: "1883"
+  ClientId: "PakoSeiryuka-Siemens-PLC1"
+  Username: ""
+  Password: ""
+  KeepAliveSeconds: "30"
+  ReconnectSeconds: "5"
+
+  # ================= Snapshot =================
+  SiemensTopic: "DATA/PLC1"
+
+  # ================= Production Events =================
+  PerCycleTopic: "DATA/Machine/Cycle"
+  ChangeModelTopic: "DATA/Machine/ChangeModel"
+
+  # ================= Machine Data Events =================
+  AlarmTimeTotalTopic: "DATA/MachineData/AlarmTimeTotal"
+  StopLossTopic: "DATA/MachineData/StopLoss"
+  DteTopic: "DATA/MachineData/DTE"
+  LoadingTopic : "DATA/MachineData/LoadingParts"
+  UnloadingTopic: "DATA/MachineData/UnloadingParts"
